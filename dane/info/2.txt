@@ -1,0 +1,21 @@
+By ustawiæ stacjê, nale¿y najpierw przejœæ do okna, klikaj¹c przycisk Dane stacji bazowej  
+i  wybraæ charakterystykê anteny, jaka bêdzie ustawiona w danym miejscu. 
+Nastêpnie prze³¹czyæ kartê na encjê Baza danych lub Informacje , po czym znów na kartê 
+projektowania pokrycia (jest to zwi¹zane z b³êdem utraty nas³uchiwania klawiatury wewn¹trz 
+okna i ten proces to przywraca). 
+Teraz, klikaj¹c prawym przyciskiem myszy na wybranym miejscu na mapie, ustalamy 
+wspó³rzêdne po³o¿enia stacji, a klawiszem A ustawiamy w to miejsce antenê. W celu 
+postawienia kolejnej anteny o tej samej charakterystyce, klikamy znów prawy przycisk myszy w 
+wybranym miejscu i klawisz A. 
+W przypadku, gdy chcemy zmieniæ charakterystykê kolejnej anteny, musimy klikn¹æ przycisk 
+Dane stacji bazowych i wybraæ interesuj¹c¹ nas antenê. Po czym powtórzyæ opisany wczeœniej 
+proces.
+
+Aby zmieniæ parametry ustawionych stacji, klikamy przycisk Dane stacji bazowych i 
+wybieramy z listy interesuj¹c¹ nas antenê (rys 8.2). Anteny s¹ opisywane w kolejnoœci ich 
+dodawania na mapie. Ich nazwy s¹ po³¹czeniem nazwy charakterystyki, jak¹ posiadaj¹ i  
+wspó³rzêdnych ich po³o¿enia (rys 8.5). Parametrami, jakie mog¹ zostaæ zmienione s¹: 
+parametr EIRP, oznaczaj¹cy sumê zysku anteny i mocy nadajnika, przedstawion¹ w dB (np. 10 dB);
+minimalna moc odbierana, czyli minimalna moc, jaka mo¿e zostaæ dostarczona do odbiorcy, w tym przypadku minimalna moc, jak¹ zapewnia stacja (np. -88 dB);
+czêstotliwoœæ, na jakiej dzia³a antena (zalecane wartoœci wykorzystywane w tego rodzaju systemach np. 900 MHz);
+k¹t, pod jakim jest zainstalowana antena, przy czym k¹t równy 0°jest w kierunku wschodnim, 90° po³udniowym, 180° zachodnim, 270° pó³nocnym (mo¿liwe wartoœci 0°-359°).

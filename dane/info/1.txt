@@ -1,0 +1,56 @@
+EIRP (ang. Equivalent or Effective Isotropical Radiated Power)
+to równowa¿na (zastêpcza, efektywna, ekwiwalentna) moc
+promieniowana izotropowo.
+EIRP oznacza moc, jak¹ musia³aby wypromieniowaæ antena 
+izotropowa (teoretyczna antena o zerowych wymiarach, która 
+emituje fale elektromagnetyczne bez strat, jednakowo w ka¿dym 
+kierunku przestrzeni), aby otrzymaæ taki poziom sygna³u w 
+odbiorniku, jaki wyst¹pi³by przy u¿yciu do nadawania badanej 
+anteny kierunkowej na kierunku jej maksymalnego 
+promieniowania.
+Podstawow¹ jednostk¹ mocy EIRP jest Wat [W]. Czêsto (dla 
+wygody w obliczeniach) EIRP wyra¿ana jest w jednostkach 
+logarytmicznych dBW (decybele w stosunku do wata), lub dBm 
+(decybele w stosunku do miliwata).
+
+Przyk³adowo dla mocy 100 mW EIRP wyra¿one w dBm 
+wynosi: 10 * log10(100mW/1mW) = 10 * log10(100)= 10 * 2 = 20dBm
+
+Dla instalacji nadawczej z³o¿onej z nadajnika, linii 
+zasilaj¹cej i anteny, EIRP mo¿na obliczyæ ze wzoru:
+
+EIRP = P - Tk + Gi
+
+gdzie EIRP i P (moc nadajnika) podane s¹ 
+w dBm, Tk (t³umienie kabla) w dB a Gi (zysk 
+anteny w stosunku do anteny izotropowej) w dB,
+
+Dla nadajnika o mocy 1 mW pod³¹czonego bez strat do anteny 
+izotropowej EIRP wynosi³a by 0 dBm. Dla rzeczywistych uk³adów 
+nadawczych aby obliczyæ EIRP nale¿y uwzglêdniæ tak¿e straty 
+wnoszone przez kabel doprowadzaj¹cy sygna³ do anteny i zysk 
+anteny. Przyk³adowo dla nadajnika o mocy 50 mW pod³¹czonego do 
+anteny o zysku 12 dBi kablem o t³umiennoœci 0,55 dB/m i o 
+d³ugoœci 18 metrów wynosi:
+
+    EIRP = 10 * log10(50 mW/1 mW) - 18 * 0,55 + 12 = 10 * 1,70 - 9,9 + 12 = 19,1 dBm
+
+Wartoœæ EIRP jest istotna miêdzy innymi przy obliczeniach 
+parametrów sieci WLAN. Wed³ug obowi¹zuj¹cych przepisów dla 
+pasma 2,4 GHz EIRP nie mo¿e przekroczyæ 20 dBm. EIRP jest 
+u¿yteczna tak¿e w dziedzinie BHP i ochrony œrodowiska, gdy¿ 
+umo¿liwia porównanie poziomu pola elektromagnetycznego dla 
+ró¿nych anten na kierunkach maksymalnego promieniowania a wiêc 
+potencjalnej ich szkodliwoœci dla ludzi. Nale¿y jednak 
+zauwa¿yæ, ¿e anteny o du¿ym zysku maj¹ w¹skie charakterystyki 
+promieniowania i zawieszone na stosunkowo du¿ej wysokoœci nie 
+wytwarzaj¹ wokó³ masztu w miejscu dostêpnym dla ludnoœci 
+szkodliwego poziomu pola elektromagnetycznego. Nie jest 
+prawd¹, ¿e po zastosowaniu anteny o zysku 30 dBi z nadajnika o 
+mocy 1 W wypromieniowana zostanie moc 1000 W, czyli o 30 dB 
+wiêksza. Zysk anteny jest bezpoœrednio zwi¹zany z jej 
+w³aœciwoœciami kierunkowymi. Im jest wy¿szy, tym antena jest 
+bardziej kierunkowa, a wiêc moc promieniowana jest w wê¿szej 
+wi¹zce.
+
+http://pl.wikipedia.org/wiki/EIRP

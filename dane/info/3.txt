@@ -1,0 +1,20 @@
+By ustawiæ obszar t³umienia, naciskamy lewy przycisk myszy w celu oznaczenia lewego górnego 
+rogu obszaru i trzymaj¹c przeci¹gamy, aby ustaliæ po³o¿enie jego prawego dolnego rogu, po 
+czym puszczamy klawisz. Obszary t³umienia mog¹ byæ rysowane jedynie od strony lewej do 
+prawej i od góry do do³u.W przypadku innego kierunku rysowania, obszar nie utworzy siê. 
+
+W celu zmiany parametrów t³umienia obszaru, nale¿y nacisn¹æ przycisk Dane przestrzeni  i 
+wybieraj¹c interesuj¹cy nas obszar, zmieniæ jego wartoœæ t³umienia. Obszary s¹ dodawane do 
+listy w kolejnoœci ich rysowania na mapie (rys 8.8), a ich nazwy to wspó³rzêdne ich pocz¹tków 
+(lewy górny róg). T³umienie obszaru oznacza t³umienie w dB na 1 piksel. W tym samym oknie 
+ustalana jest równie¿ wartoœæ skali, oznaczaj¹ca ile pikseli ma oznaczaæ 1 km.
+
+Aby wyœwietliæ zasiêg ustawionych stacji, nale¿y nacisn¹æ przycisk Rysuj zasiêg. Przycisk ten 
+musi byæ  równie¿ zatwierdzony po zmianie parametrów budynków lub anten, w celu 
+odœwie¿enia obliczeñ.
+W celu usuniêcia wszystkich elementów naniesionych na mapê, nale¿y nacisn¹æ na 
+klawiaturze klawisz N. Aby usun¹æ tylko obszary t³umienia klawisz B, a klawisz M, ¿eby 
+usun¹æ tylko stacje.
+W celu zapisania stworzonej mapy z naniesionymi antenami, obszarami t³umienia i 
+wizualizacj¹ zasiêgu, nale¿y nacisn¹æ klawisz Zapisz mapê i wybraæ lokalizacjê oraz nazwê, 
+pod jak¹ ma byæ zapisany plik.
