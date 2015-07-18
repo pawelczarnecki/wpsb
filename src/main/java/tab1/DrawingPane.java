@@ -14,10 +14,10 @@ public class DrawingPane extends JPanel {
 	private static final long serialVersionUID = 2969086361974514775L;
 	public BufferedImage backGroundImage;
 	private Vector<Shape> shapes;
-	private List<Antenna> antennas;
+	private List<AntennaDrawable> antennas;
 	private List<Building> buildings;
 
-	public DrawingPane(Vector<Shape> shapes, List<Antenna> antennas, List<Building> buildings) {
+	public DrawingPane(Vector<Shape> shapes, List<AntennaDrawable> antennas, List<Building> buildings) {
 		this.shapes = shapes;
 		this.antennas = antennas;
 		this.buildings = buildings;
@@ -47,7 +47,7 @@ public class DrawingPane extends JPanel {
 		for(Building building : buildings ){
 			building.draw(g2);
 		}
-		for(Antenna antenna : antennas){
+		for(AntennaDrawable antenna : antennas){
 			antenna.draw(g2, buildings);
 		}
 		

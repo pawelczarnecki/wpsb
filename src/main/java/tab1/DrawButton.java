@@ -8,12 +8,12 @@ import java.util.List;
 public class DrawButton extends JButton implements ActionListener {
 	private static final long serialVersionUID = -8082236412704993101L;
 	
-	private List<Antenna> antennas;
+	private List<AntennaDrawable> antennas;
 	private JPanel drawingPane;
 
 	private List<Building> buildings;
 
-	public DrawButton(Tab2JPanel drawingPane, List<Antenna> antennas, List<Building> buildings) {
+	public DrawButton(Tab2JPanel drawingPane, List<AntennaDrawable> antennas, List<Building> buildings) {
 		super("Narysuj");
 		this.drawingPane = drawingPane;
 		this.antennas = antennas;
@@ -26,7 +26,7 @@ public class DrawButton extends JButton implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
-		for (Antenna antenna : antennas) {
+		for (AntennaDrawable antenna : antennas) {
 			
 			antenna.drawLines(buildings);
 		}

@@ -8,7 +8,7 @@ class TerritorySpec extends Specification {
     private int power = 10
     private int angle = 10
     private int frequency = 10
-    private AntennaCharacteristic antennaCharacteristic = new AntennaCharacteristic([(0): 100])
+    private AntennaCharacteristic antennaCharacteristic = new AntennaCharacteristic([])
     private Antenna antenna = new Antenna(power, angle, frequency, antennaCharacteristic)
 
     def "Should calculate cover"() {

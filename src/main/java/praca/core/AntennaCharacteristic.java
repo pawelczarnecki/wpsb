@@ -1,11 +1,11 @@
 package praca.core;
 
-import java.util.Map;
+import java.util.List;
 
 public class AntennaCharacteristic {
-    public final Map<Integer, Integer> characteristic;
+    public final List<AntennaCharacteristicSingleLine> lines;
 
-    public AntennaCharacteristic(Map<Integer, Integer> characteristic) {
-        this.characteristic = characteristic;
+    public AntennaCharacteristic(List<AntennaCharacteristicSingleLine> lines) {
+        this.lines = lines;
     }
 }

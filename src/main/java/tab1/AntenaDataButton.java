@@ -10,9 +10,9 @@ public class AntenaDataButton extends JButton implements ActionListener {
 	
 	private Tab2JPanel tab2JPanel;
 
-	private List<Antenna> antennas;
+	private List<AntennaDrawable> antennas;
 
-	public AntenaDataButton(Tab2JPanel tab2JPanel, List<Antenna> antennas) {
+	public AntenaDataButton(Tab2JPanel tab2JPanel, List<AntennaDrawable> antennas) {
 		super("Zmien dane");
 		this.tab2JPanel = tab2JPanel;
 		this.antennas = antennas;

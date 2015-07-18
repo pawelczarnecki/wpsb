@@ -8,7 +8,7 @@ import java.util.Vector;
 
 public class Tab2JPanel extends JPanel {
 	private static final long serialVersionUID = -1073342979021233050L;
-	private List<Antenna> antennas = new ArrayList<>();
+	private List<AntennaDrawable> antennas = new ArrayList<>();
 	private List<Building> buildings = new ArrayList<>();
 	private String filename;
 	//CHANGE VECTOR TO LIST

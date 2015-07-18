@@ -27,9 +27,9 @@ public class AntenaData extends JFrame implements ActionListener {
 	public String Propagacja = "";
 	private Tab2JPanel tab2jPanel;
 
-	private List<Antenna> antennas;
+	private List<AntennaDrawable> antennas;
 
-	public AntenaData(Tab2JPanel tab2jPanel, List<Antenna> antennas) {
+	public AntenaData(Tab2JPanel tab2jPanel, List<AntennaDrawable> antennas) {
 		this.tab2jPanel = tab2jPanel;
 		this.antennas = antennas;
 
@@ -69,7 +69,7 @@ public class AntenaData extends JFrame implements ActionListener {
 			@Override
 			public void itemStateChanged(ItemEvent e) {
 				//System.out.println(e.getItem() + " " + e.getStateChange() );
-				Antenna selectedAntenna = (Antenna) jComboBox1.getSelectedItem();
+				AntennaDrawable selectedAntenna = (AntennaDrawable) jComboBox1.getSelectedItem();
 				ZyskField.setText(selectedAntenna.getZysk());
 				MinZyskField.setText(selectedAntenna.getMinZysk());
 				CzestotliwoscField.setText(selectedAntenna.getCzestotliwosc());
@@ -88,7 +88,7 @@ public class AntenaData extends JFrame implements ActionListener {
 
 			@Override
 			public void focusLost(FocusEvent e) {
-				Antenna selectedAntenna = (Antenna) jComboBox1.getSelectedItem();
+				AntennaDrawable selectedAntenna = (AntennaDrawable) jComboBox1.getSelectedItem();
 				selectedAntenna.setZysk(ZyskField.getText());
 			}
 
@@ -100,7 +100,7 @@ public class AntenaData extends JFrame implements ActionListener {
 
 			@Override
 			public void focusLost(FocusEvent e) {
-				Antenna selectedAntenna = (Antenna) jComboBox1.getSelectedItem();
+				AntennaDrawable selectedAntenna = (AntennaDrawable) jComboBox1.getSelectedItem();
 				selectedAntenna.setMinZysk(MinZyskField.getText());
 			}
 
@@ -111,7 +111,7 @@ public class AntenaData extends JFrame implements ActionListener {
 			}
 			@Override
 			public void focusLost(FocusEvent e) {
-				Antenna selectedAntenna = (Antenna) jComboBox1.getSelectedItem();
+				AntennaDrawable selectedAntenna = (AntennaDrawable) jComboBox1.getSelectedItem();
 				selectedAntenna.setCzestotliwosc(CzestotliwoscField.getText());
 			}
 		});
@@ -121,7 +121,7 @@ public class AntenaData extends JFrame implements ActionListener {
 			}
 			@Override
 			public void focusLost(FocusEvent e) {
-				Antenna selectedAntenna = (Antenna) jComboBox1.getSelectedItem();
+				AntennaDrawable selectedAntenna = (AntennaDrawable) jComboBox1.getSelectedItem();
 				selectedAntenna.setKat(KatField.getText());
 			}
 		});

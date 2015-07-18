@@ -1,4 +1,4 @@
-package tab1;
+package praca.core;
 
 public class AntennaCharacteristicSingleLine {
 

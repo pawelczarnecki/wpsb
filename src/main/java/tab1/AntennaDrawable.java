@@ -1,5 +1,8 @@
 package tab1;
 
+import praca.core.AntennaCharacteristic;
+import praca.core.AntennaCharacteristicSingleLine;
+
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.geom.Point2D;
@@ -10,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Antenna {
+public class AntennaDrawable {
 
     // private static final int CHANGING_LINES_LENGHT = 2;
     private static final BufferedImage icon = antenaIcon();
@@ -21,24 +24,23 @@ public class Antenna {
     private int minZysk;
     private int czestotliwosc;
     private final List<Linia> lines = new ArrayList<>();
-    private final List<Building> buildings = new ArrayList<>();
-    private final List<AntennaCharacteristicSingleLine> characteristic;
+    private final AntennaCharacteristic characteristic;
 
-    public static Antenna newAntenna(int x, int y, String filename) {
-        return new Antenna(x, y, 0, 10, -88, 800, readCharacteristicFromFile(filename));
+    public static AntennaDrawable newAntenna(int x, int y, String filename) {
+        return new AntennaDrawable(x, y, 0, 10, -88, 800, readCharacteristicFromFile(filename));
     }
 
-    public Antenna(int x, int y, double angle, int Zysk, int minZysk, int czestotliwosc, List<AntennaCharacteristicSingleLine> characteristicFromFile) {
-        this.Zysk = Zysk;
-        this.minZysk = minZysk;
-        this.czestotliwosc = czestotliwosc;
+    public AntennaDrawable(int x, int y, double angle, int gain, int minGain, int frequency, AntennaCharacteristic characteristic) {
+        this.Zysk = gain;
+        this.minZysk = minGain;
+        this.czestotliwosc = frequency;
         this.angle = angle;
         this.x = x;
         this.y = y;
-        this.characteristic = characteristicFromFile;
+        this.characteristic = characteristic;
     }
 
-    private static List<AntennaCharacteristicSingleLine> readCharacteristicFromFile(String filename) {
+    private static AntennaCharacteristic readCharacteristicFromFile(String filename) {
         System.out.println(new File(filename).getAbsolutePath());
         List<AntennaCharacteristicSingleLine> characteristic = new ArrayList<>();
         try (Scanner scanner = new Scanner(new File(filename))) {
@@ -48,7 +50,7 @@ public class Antenna {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return characteristic;
+        return new AntennaCharacteristic(characteristic);
     }
 
     public void draw(Graphics2D g2, List<Building> buildings) {
@@ -65,7 +67,7 @@ public class Antenna {
 
     public void drawLines(List<Building> buildings) {
         lines.clear();
-        for (AntennaCharacteristicSingleLine singleLine : characteristic) {
+        for (AntennaCharacteristicSingleLine singleLine : characteristic.lines) {
             drawOneLine(buildings, singleLine);
         }
     }
@@ -83,8 +85,6 @@ public class Antenna {
 
         Linia line = new Linia(point, Zysk + procentZysk - minZysk, kat, czestotliwosc);
         lines.add(line);
-
-
     }
 
     private static BufferedImage antenaIcon() {
@@ -126,8 +126,6 @@ public class Antenna {
     public String getKat() {
         return "" + angle;
     }
-
-
 
     public void setKat(String text) {
         angle = Integer.parseInt(text);
