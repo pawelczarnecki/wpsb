@@ -3,47 +3,31 @@ package tab1;
 import praca.core.Antenna;
 import praca.core.AntennaCharacteristic;
 import praca.core.AntennaCharacteristicSingleLine;
+import praca.utils.BufferedImageUtils;
 
-import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class AntennaDrawable {
 
     // private static final int CHANGING_LINES_LENGHT = 2;
-    private static final BufferedImage icon = antenaIcon();
+    private static final BufferedImage icon = BufferedImageUtils.antenaIcon();
     private final int x;
     private final int y;
     private Antenna antenna;
     private final List<Linia> lines = new ArrayList<>();
 
     public static AntennaDrawable newAntenna(int x, int y, String filename) {
-        return new AntennaDrawable(x, y, new Antenna(10, -88, 0, 800, readCharacteristicFromFile(filename)));
+        return new AntennaDrawable(x, y, new Antenna(10, -88, 0, 800, AntennaCharacteristic.readCharacteristicFromFile(filename)));
     }
 
     public AntennaDrawable(int x, int y, Antenna antenna) {
         this.x = x;
         this.y = y;
         this.antenna = antenna;
-    }
-
-    private static AntennaCharacteristic readCharacteristicFromFile(String filename) {
-        System.out.println(new File(filename).getAbsolutePath());
-        List<AntennaCharacteristicSingleLine> characteristic = new ArrayList<>();
-        try (Scanner scanner = new Scanner(new File(filename))) {
-            while (scanner.hasNextLine()) {
-                characteristic.add(AntennaCharacteristicSingleLine.fromLine(scanner.nextLine()));
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return new AntennaCharacteristic(characteristic);
     }
 
     public void draw(Graphics2D g2, List<Building> buildings) {
@@ -77,18 +61,6 @@ public class AntennaDrawable {
 
         Linia line = new Linia(point, antenna.gain + procentZysk - antenna.minGain, kat, antenna.frequency);
         lines.add(line);
-    }
-
-    private static BufferedImage antenaIcon() {
-        try {
-            File file = new File("dane/15.png");
-            if (!file.exists())
-                throw new RuntimeException("file not found:"
-                        + file.getAbsolutePath());
-            return ImageIO.read(file);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
     }
 
     public String getGain() {
