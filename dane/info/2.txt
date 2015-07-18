@@ -1,21 +1,22 @@
-By ustawiæ stacjê, nale¿y najpierw przejœæ do okna, klikaj¹c przycisk Dane stacji bazowej  
-i  wybraæ charakterystykê anteny, jaka bêdzie ustawiona w danym miejscu. 
-Nastêpnie prze³¹czyæ kartê na encjê Baza danych lub Informacje , po czym znów na kartê 
-projektowania pokrycia (jest to zwi¹zane z b³êdem utraty nas³uchiwania klawiatury wewn¹trz 
+By ustawiï¿½ stacjï¿½, naleï¿½y najpierw przejï¿½ï¿½ do okna, klikajï¿½c przycisk Dane stacji bazowej  
+i  wybraï¿½ charakterystykï¿½ anteny, jaka bï¿½dzie ustawiona w danym miejscu. 
+Nastï¿½pnie przeï¿½ï¿½czyï¿½ kartï¿½ na encjï¿½ Baza danych lub Informacje , po czym znï¿½w na kartï¿½ 
+projektowania pokrycia (jest to zwiï¿½zane z bï¿½ï¿½dem utraty nasï¿½uchiwania klawiatury wewnï¿½trz 
 okna i ten proces to przywraca). 
-Teraz, klikaj¹c prawym przyciskiem myszy na wybranym miejscu na mapie, ustalamy 
-wspó³rzêdne po³o¿enia stacji, a klawiszem A ustawiamy w to miejsce antenê. W celu 
-postawienia kolejnej anteny o tej samej charakterystyce, klikamy znów prawy przycisk myszy w 
+Teraz, klikajï¿½c prawym przyciskiem myszy na wybranym miejscu na mapie, ustalamy 
+wspï¿½rzï¿½dne poï¿½oï¿½enia stacji, a klawiszem A ustawiamy w to miejsce antenï¿½. W celu 
+postawienia kolejnej anteny o tej samej charakterystyce, klikamy znï¿½w prawy przycisk myszy w 
 wybranym miejscu i klawisz A. 
-W przypadku, gdy chcemy zmieniæ charakterystykê kolejnej anteny, musimy klikn¹æ przycisk 
-Dane stacji bazowych i wybraæ interesuj¹c¹ nas antenê. Po czym powtórzyæ opisany wczeœniej 
+W przypadku, gdy chcemy zmieniï¿½ charakterystykï¿½ kolejnej anteny, musimy kliknï¿½ï¿½ przycisk 
+Dane stacji bazowych i wybraï¿½ interesujï¿½cï¿½ nas antenï¿½. Po czym powtï¿½rzyï¿½ opisany wczeï¿½niej 
 proces.
 
-Aby zmieniæ parametry ustawionych stacji, klikamy przycisk Dane stacji bazowych i 
-wybieramy z listy interesuj¹c¹ nas antenê (rys 8.2). Anteny s¹ opisywane w kolejnoœci ich 
-dodawania na mapie. Ich nazwy s¹ po³¹czeniem nazwy charakterystyki, jak¹ posiadaj¹ i  
-wspó³rzêdnych ich po³o¿enia (rys 8.5). Parametrami, jakie mog¹ zostaæ zmienione s¹: 
-parametr EIRP, oznaczaj¹cy sumê zysku anteny i mocy nadajnika, przedstawion¹ w dB (np. 10 dB);
-minimalna moc odbierana, czyli minimalna moc, jaka mo¿e zostaæ dostarczona do odbiorcy, w tym przypadku minimalna moc, jak¹ zapewnia stacja (np. -88 dB);
-czêstotliwoœæ, na jakiej dzia³a antena (zalecane wartoœci wykorzystywane w tego rodzaju systemach np. 900 MHz);
-k¹t, pod jakim jest zainstalowana antena, przy czym k¹t równy 0°jest w kierunku wschodnim, 90° po³udniowym, 180° zachodnim, 270° pó³nocnym (mo¿liwe wartoœci 0°-359°).
+Aby zmieniï¿½ parametry ustawionych stacji, klikamy przycisk Dane stacji bazowych i 
+wybieramy z listy interesujï¿½cï¿½ nas antenï¿½ (rys 8.2). Anteny sï¿½ opisywane w kolejnoï¿½ci ich 
+dodawania na mapie. Ich nazwy sï¿½ poï¿½ï¿½czeniem nazwy charakterystyki, jakï¿½ posiadajï¿½ i  
+wspï¿½rzï¿½dnych ich poï¿½oï¿½enia (rys 8.5). Parametrami, jakie mogï¿½ zostaï¿½ zmienione sï¿½: 
+parametr EIRP, oznaczajï¿½cy sumï¿½ zysku anteny i mocy nadajnika, przedstawionï¿½ w dB (np. 10 dB);
+minimalna moc odbierana, czyli minimalna moc, jaka moï¿½e zostaï¿½ dostarczona do odbiorcy, w tym przypadku minimalna moc, jakï¿½ zapewnia stacja (np. -88 dB);
+czï¿½stotliwoï¿½ï¿½, na jakiej dziaï¿½a antena (zalecane wartoï¿½ci wykorzystywane w tego rodzaju systemach np. 900 MHz);
+kï¿½t, pod jakim jest zainstalowana antena, przy czym kï¿½t rï¿½wny 0ï¿½jest w kierunku wschodnim, 90ï¿½ poï¿½udniowym, 180ï¿½ zachodnim, 270ï¿½ pï¿½nocnym (moï¿½liwe wartoï¿½ci 0ï¿½-359ï¿½).
+

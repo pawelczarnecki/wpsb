@@ -1,56 +1,56 @@
 EIRP (ang. Equivalent or Effective Isotropical Radiated Power)
-to równowa¿na (zastêpcza, efektywna, ekwiwalentna) moc
+to rï¿½wnowaï¿½na (zastï¿½pcza, efektywna, ekwiwalentna) moc
 promieniowana izotropowo.
-EIRP oznacza moc, jak¹ musia³aby wypromieniowaæ antena 
-izotropowa (teoretyczna antena o zerowych wymiarach, która 
-emituje fale elektromagnetyczne bez strat, jednakowo w ka¿dym 
-kierunku przestrzeni), aby otrzymaæ taki poziom sygna³u w 
-odbiorniku, jaki wyst¹pi³by przy u¿yciu do nadawania badanej 
-anteny kierunkowej na kierunku jej maksymalnego 
+EIRP oznacza moc, jakï¿½ musiaï¿½aby wypromieniowaï¿½ antena
+izotropowa (teoretyczna antena o zerowych wymiarach, ktï¿½ra
+emituje fale elektromagnetyczne bez strat, jednakowo w kaï¿½dym
+kierunku przestrzeni), aby otrzymaï¿½ taki poziom sygnaï¿½u w
+odbiorniku, jaki wystï¿½piï¿½by przy uï¿½yciu do nadawania badanej
+anteny kierunkowej na kierunku jej maksymalnego
 promieniowania.
-Podstawow¹ jednostk¹ mocy EIRP jest Wat [W]. Czêsto (dla 
-wygody w obliczeniach) EIRP wyra¿ana jest w jednostkach 
-logarytmicznych dBW (decybele w stosunku do wata), lub dBm 
+Podstawowï¿½ jednostkï¿½ mocy EIRP jest Wat [W]. Czï¿½sto (dla
+wygody w obliczeniach) EIRP wyraï¿½ana jest w jednostkach
+logarytmicznych dBW (decybele w stosunku do wata), lub dBm
 (decybele w stosunku do miliwata).
 
-Przyk³adowo dla mocy 100 mW EIRP wyra¿one w dBm 
+Przykï¿½adowo dla mocy 100 mW EIRP wyraï¿½one w dBm
 wynosi: 10 * log10(100mW/1mW) = 10 * log10(100)= 10 * 2 = 20dBm
 
-Dla instalacji nadawczej z³o¿onej z nadajnika, linii 
-zasilaj¹cej i anteny, EIRP mo¿na obliczyæ ze wzoru:
+Dla instalacji nadawczej zï¿½oï¿½onej z nadajnika, linii
+zasilajï¿½cej i anteny, EIRP moï¿½na obliczyï¿½ ze wzoru:
 
 EIRP = P - Tk + Gi
 
-gdzie EIRP i P (moc nadajnika) podane s¹ 
-w dBm, Tk (t³umienie kabla) w dB a Gi (zysk 
+gdzie EIRP i P (moc nadajnika) podane sï¿½
+w dBm, Tk (tï¿½umienie kabla) w dB a Gi (zysk
 anteny w stosunku do anteny izotropowej) w dB,
 
-Dla nadajnika o mocy 1 mW pod³¹czonego bez strat do anteny 
-izotropowej EIRP wynosi³a by 0 dBm. Dla rzeczywistych uk³adów 
-nadawczych aby obliczyæ EIRP nale¿y uwzglêdniæ tak¿e straty 
-wnoszone przez kabel doprowadzaj¹cy sygna³ do anteny i zysk 
-anteny. Przyk³adowo dla nadajnika o mocy 50 mW pod³¹czonego do 
-anteny o zysku 12 dBi kablem o t³umiennoœci 0,55 dB/m i o 
-d³ugoœci 18 metrów wynosi:
+Dla nadajnika o mocy 1 mW podï¿½ï¿½czonego bez strat do anteny
+izotropowej EIRP wynosiï¿½a by 0 dBm. Dla rzeczywistych ukï¿½adï¿½w
+nadawczych aby obliczyï¿½ EIRP naleï¿½y uwzglï¿½dniï¿½ takï¿½e straty
+wnoszone przez kabel doprowadzajï¿½cy sygnaï¿½ do anteny i zysk
+anteny. Przykï¿½adowo dla nadajnika o mocy 50 mW podï¿½ï¿½czonego do
+anteny o zysku 12 dBi kablem o tï¿½umiennoï¿½ci 0,55 dB/m i o
+dï¿½ugoï¿½ci 18 metrï¿½w wynosi:
 
     EIRP = 10 * log10(50 mW/1 mW) - 18 * 0,55 + 12 = 10 * 1,70 - 9,9 + 12 = 19,1 dBm
 
-Wartoœæ EIRP jest istotna miêdzy innymi przy obliczeniach 
-parametrów sieci WLAN. Wed³ug obowi¹zuj¹cych przepisów dla 
-pasma 2,4 GHz EIRP nie mo¿e przekroczyæ 20 dBm. EIRP jest 
-u¿yteczna tak¿e w dziedzinie BHP i ochrony œrodowiska, gdy¿ 
-umo¿liwia porównanie poziomu pola elektromagnetycznego dla 
-ró¿nych anten na kierunkach maksymalnego promieniowania a wiêc 
-potencjalnej ich szkodliwoœci dla ludzi. Nale¿y jednak 
-zauwa¿yæ, ¿e anteny o du¿ym zysku maj¹ w¹skie charakterystyki 
-promieniowania i zawieszone na stosunkowo du¿ej wysokoœci nie 
-wytwarzaj¹ wokó³ masztu w miejscu dostêpnym dla ludnoœci 
-szkodliwego poziomu pola elektromagnetycznego. Nie jest 
-prawd¹, ¿e po zastosowaniu anteny o zysku 30 dBi z nadajnika o 
-mocy 1 W wypromieniowana zostanie moc 1000 W, czyli o 30 dB 
-wiêksza. Zysk anteny jest bezpoœrednio zwi¹zany z jej 
-w³aœciwoœciami kierunkowymi. Im jest wy¿szy, tym antena jest 
-bardziej kierunkowa, a wiêc moc promieniowana jest w wê¿szej 
-wi¹zce.
+Wartoï¿½ï¿½ EIRP jest istotna miï¿½dzy innymi przy obliczeniach
+parametrï¿½w sieci WLAN. Wedï¿½ug obowiï¿½zujï¿½cych przepisï¿½w dla
+pasma 2,4 GHz EIRP nie moï¿½e przekroczyï¿½ 20 dBm. EIRP jest
+uï¿½yteczna takï¿½e w dziedzinie BHP i ochrony ï¿½rodowiska, gdyï¿½
+umoï¿½liwia porï¿½wnanie poziomu pola elektromagnetycznego dla
+rï¿½nych anten na kierunkach maksymalnego promieniowania a wiï¿½c
+potencjalnej ich szkodliwoï¿½ci dla ludzi. Naleï¿½y jednak
+zauwaï¿½yï¿½, ï¿½e anteny o duï¿½ym zysku majï¿½ wï¿½skie charakterystyki
+promieniowania i zawieszone na stosunkowo duï¿½ej wysokoï¿½ci nie
+wytwarzajï¿½ wokï¿½ masztu w miejscu dostï¿½pnym dla ludnoï¿½ci
+szkodliwego poziomu pola elektromagnetycznego. Nie jest
+prawdï¿½, ï¿½e po zastosowaniu anteny o zysku 30 dBi z nadajnika o
+mocy 1 W wypromieniowana zostanie moc 1000 W, czyli o 30 dB
+wiï¿½ksza. Zysk anteny jest bezpoï¿½rednio zwiï¿½zany z jej
+wï¿½aï¿½ciwoï¿½ciami kierunkowymi. Im jest wyï¿½szy, tym antena jest
+bardziej kierunkowa, a wiï¿½c moc promieniowana jest w wï¿½szej
+wiï¿½zce.
 
 http://pl.wikipedia.org/wiki/EIRP
