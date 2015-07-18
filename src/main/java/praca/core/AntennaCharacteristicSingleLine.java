@@ -2,12 +2,12 @@ package praca.core;
 
 public class AntennaCharacteristicSingleLine {
 
-    public final int dAngle;
-    public final int powerOnDAngle;
+    public final int angle;
+    public final int power;
 
-    public AntennaCharacteristicSingleLine(int dAngle, int powerOnDAngle) {
-        this.dAngle = dAngle;
-        this.powerOnDAngle = powerOnDAngle;
+    public AntennaCharacteristicSingleLine(int angle, int power) {
+        this.angle = angle;
+        this.power = power;
     }
 
     public static AntennaCharacteristicSingleLine fromLine(String line) {

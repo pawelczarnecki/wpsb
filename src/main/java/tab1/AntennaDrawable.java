@@ -1,5 +1,6 @@
 package tab1;
 
+import praca.core.Antenna;
 import praca.core.AntennaCharacteristic;
 import praca.core.AntennaCharacteristicSingleLine;
 
@@ -19,25 +20,17 @@ public class AntennaDrawable {
     private static final BufferedImage icon = antenaIcon();
     private final int x;
     private final int y;
-    private double angle;
-    private int Zysk;
-    private int minZysk;
-    private int czestotliwosc;
+    private Antenna antenna;
     private final List<Linia> lines = new ArrayList<>();
-    private final AntennaCharacteristic characteristic;
 
     public static AntennaDrawable newAntenna(int x, int y, String filename) {
-        return new AntennaDrawable(x, y, 0, 10, -88, 800, readCharacteristicFromFile(filename));
+        return new AntennaDrawable(x, y, new Antenna(10, -88, 0, 800, readCharacteristicFromFile(filename)));
     }
 
-    public AntennaDrawable(int x, int y, double angle, int gain, int minGain, int frequency, AntennaCharacteristic characteristic) {
-        this.Zysk = gain;
-        this.minZysk = minGain;
-        this.czestotliwosc = frequency;
-        this.angle = angle;
+    public AntennaDrawable(int x, int y, Antenna antenna) {
         this.x = x;
         this.y = y;
-        this.characteristic = characteristic;
+        this.antenna = antenna;
     }
 
     private static AntennaCharacteristic readCharacteristicFromFile(String filename) {
@@ -54,8 +47,7 @@ public class AntennaDrawable {
     }
 
     public void draw(Graphics2D g2, List<Building> buildings) {
-        g2.drawImage(icon, x - icon.getWidth() / 2, y - icon.getHeight() / 2,
-                Color.WHITE, null);
+        g2.drawImage(icon, x - icon.getWidth() / 2, y - icon.getHeight() / 2,  Color.WHITE, null);
         Graphics2D create = (Graphics2D) g2.create();
         //create.rotate(Math.toRadians(angle));
         for (Linia line : lines) {
@@ -67,7 +59,7 @@ public class AntennaDrawable {
 
     public void drawLines(List<Building> buildings) {
         lines.clear();
-        for (AntennaCharacteristicSingleLine singleLine : characteristic.lines) {
+        for (AntennaCharacteristicSingleLine singleLine : antenna.characteristic.lines) {
             drawOneLine(buildings, singleLine);
         }
     }
@@ -78,12 +70,12 @@ public class AntennaDrawable {
     }
 
     private void drawOneLine(List<Building> buildings, AntennaCharacteristicSingleLine singleLine) {
-        double procentZysk = 20 * Math.log10(singleLine.powerOnDAngle / 100d);
-        double kat = singleLine.dAngle + angle;
+        double procentZysk = 20 * Math.log10(singleLine.power / 100d);
+        double kat = singleLine.angle + antenna.angle;
         //double radians = Math.toRadians(kat);
         Point2D point = new Point2D.Double(x, y);
 
-        Linia line = new Linia(point, Zysk + procentZysk - minZysk, kat, czestotliwosc);
+        Linia line = new Linia(point, antenna.gain + procentZysk - antenna.minGain, kat, antenna.frequency);
         lines.add(line);
     }
 
@@ -99,36 +91,35 @@ public class AntennaDrawable {
         }
     }
 
-    public String getZysk() {
-        return "" + Zysk;
+    public String getGain() {
+        return "" + antenna.gain;
     }
 
-    public void setZysk(String text) {
-        Zysk = Integer.parseInt(text);
+    public void setGain(String text) {
+        antenna = antenna.withGain(Integer.parseInt(text));
     }
 
-    public String getMinZysk() {
-        return "" + minZysk;
+    public String getMinGain() {
+        return "" + antenna.minGain;
     }
 
-    public void setMinZysk(String text) {
-        minZysk = Integer.parseInt(text);
+    public void setMinGain(String text) {
+        antenna = antenna.withMinGain(Integer.parseInt(text));
     }
 
-    public String getCzestotliwosc() {
-        return "" + czestotliwosc;
+    public String getFrequency() {
+        return "" + antenna.frequency;
     }
 
-    public void setCzestotliwosc(String text) {
-        czestotliwosc = Integer.parseInt(text);
+    public void setFrequency(String text) {
+        antenna = antenna.withFrequency(Integer.parseInt(text));
     }
 
-    public String getKat() {
-        return "" + angle;
+    public String getAngle() {
+        return "" + antenna.angle;
     }
 
-    public void setKat(String text) {
-        angle = Integer.parseInt(text);
-
+    public void setAngle(String text) {
+        antenna = antenna.withAngle(Integer.parseInt(text));
     }
 }

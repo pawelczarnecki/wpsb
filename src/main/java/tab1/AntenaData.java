@@ -70,10 +70,10 @@ public class AntenaData extends JFrame implements ActionListener {
 			public void itemStateChanged(ItemEvent e) {
 				//System.out.println(e.getItem() + " " + e.getStateChange() );
 				AntennaDrawable selectedAntenna = (AntennaDrawable) jComboBox1.getSelectedItem();
-				ZyskField.setText(selectedAntenna.getZysk());
-				MinZyskField.setText(selectedAntenna.getMinZysk());
-				CzestotliwoscField.setText(selectedAntenna.getCzestotliwosc());
-				KatField.setText(selectedAntenna.getKat());
+				ZyskField.setText(selectedAntenna.getGain());
+				MinZyskField.setText(selectedAntenna.getMinGain());
+				CzestotliwoscField.setText(selectedAntenna.getFrequency());
+				KatField.setText(selectedAntenna.getAngle());
 			}
 	
 
@@ -89,7 +89,7 @@ public class AntenaData extends JFrame implements ActionListener {
 			@Override
 			public void focusLost(FocusEvent e) {
 				AntennaDrawable selectedAntenna = (AntennaDrawable) jComboBox1.getSelectedItem();
-				selectedAntenna.setZysk(ZyskField.getText());
+				selectedAntenna.setGain(ZyskField.getText());
 			}
 
 		});
@@ -101,7 +101,7 @@ public class AntenaData extends JFrame implements ActionListener {
 			@Override
 			public void focusLost(FocusEvent e) {
 				AntennaDrawable selectedAntenna = (AntennaDrawable) jComboBox1.getSelectedItem();
-				selectedAntenna.setMinZysk(MinZyskField.getText());
+				selectedAntenna.setMinGain(MinZyskField.getText());
 			}
 
 		});
@@ -112,7 +112,7 @@ public class AntenaData extends JFrame implements ActionListener {
 			@Override
 			public void focusLost(FocusEvent e) {
 				AntennaDrawable selectedAntenna = (AntennaDrawable) jComboBox1.getSelectedItem();
-				selectedAntenna.setCzestotliwosc(CzestotliwoscField.getText());
+				selectedAntenna.setFrequency(CzestotliwoscField.getText());
 			}
 		});
 		KatField.addFocusListener(new FocusListener() {
@@ -122,7 +122,7 @@ public class AntenaData extends JFrame implements ActionListener {
 			@Override
 			public void focusLost(FocusEvent e) {
 				AntennaDrawable selectedAntenna = (AntennaDrawable) jComboBox1.getSelectedItem();
-				selectedAntenna.setKat(KatField.getText());
+				selectedAntenna.setAngle(KatField.getText());
 			}
 		});
 		
