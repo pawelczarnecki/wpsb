@@ -1,18 +1,9 @@
 package tab4;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-
-import javax.swing.JButton;
-import javax.swing.table.DefaultTableModel;
-
-import tab2.NewJPanel;
-import tab4.Zakladka4;
+import java.sql.*;
 
 public class WyswietlButton extends JButton implements ActionListener {
 	private Zakladka4 zakladka4;

@@ -1,10 +1,9 @@
 package tab1;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
-
-import javax.swing.JButton;
 
 public class OtherDataButton extends JButton implements ActionListener {
 

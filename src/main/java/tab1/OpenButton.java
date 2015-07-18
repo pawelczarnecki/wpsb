@@ -1,11 +1,9 @@
 package tab1;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
-
-import javax.swing.JButton;
-import javax.swing.JFileChooser;
 
 public class OpenButton extends JButton implements ActionListener {
 	private static final long serialVersionUID = 863386783025708473L;

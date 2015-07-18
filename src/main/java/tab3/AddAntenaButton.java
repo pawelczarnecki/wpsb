@@ -1,21 +1,11 @@
 package tab3;
 
-import java.awt.Component;
+import tab4.Edytuj;
+
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-
-import javax.swing.JButton;
-import javax.swing.JOptionPane;
-
-import tab4.Edytuj;
+import java.sql.*;
 
 public class AddAntenaButton extends JButton implements ActionListener {
 	private static final long serialVersionUID = 4806104302614326494L;

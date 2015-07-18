@@ -1,10 +1,9 @@
 package tab1;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
-
-import javax.swing.JButton;
 
 public class AntenaDataButton extends JButton implements ActionListener {
 	private static final long serialVersionUID = -51132147249950499L;

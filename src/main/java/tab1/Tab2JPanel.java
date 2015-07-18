@@ -1,13 +1,10 @@
 package tab1;
 
-import java.awt.BorderLayout;
-import java.awt.Shape;
+import javax.swing.*;
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
-
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
 
 public class Tab2JPanel extends JPanel {
 	private static final long serialVersionUID = -1073342979021233050L;

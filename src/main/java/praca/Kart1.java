@@ -1,13 +1,9 @@
 package praca;
 
-import java.awt.Button;
-import java.awt.CardLayout;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-import javax.swing.GroupLayout;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
 
 public class Kart1 extends JPanel implements ActionListener {
 	private static final long serialVersionUID = -818165082409981247L;

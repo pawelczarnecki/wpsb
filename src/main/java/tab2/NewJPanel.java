@@ -1,21 +1,10 @@
 package tab2;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import praca.FilesInLocation;
 
-import javax.swing.DefaultListModel;
-import javax.swing.GroupLayout;
-import javax.swing.JList;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.ListSelectionModel;
+import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
-
-import praca.FilesInLocation;
 
 /*
  * To change this license header, choose License Headers in Project Properties.

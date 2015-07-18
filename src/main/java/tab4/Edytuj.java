@@ -1,15 +1,12 @@
 package tab4;
 
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-
-import tab1.Tab2JPanel;
 import tab3.AddAntenaButton;
 import tab3.UsunButton;
+
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Edytuj extends JFrame implements ActionListener {
 

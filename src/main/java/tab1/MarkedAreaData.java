@@ -1,10 +1,5 @@
 package tab1;
 
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
-
 public class MarkedAreaData {//implements List<MarkedAreaData> {
 
 	public static int posX;

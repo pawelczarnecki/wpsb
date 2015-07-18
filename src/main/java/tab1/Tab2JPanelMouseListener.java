@@ -1,18 +1,10 @@
 package tab1;
 
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Rectangle;
-import java.awt.Shape;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.List;
-import java.util.Vector;
-
-import javax.swing.JPanel;
-import javax.swing.SwingUtilities;
 
 public class Tab2JPanelMouseListener implements MouseListener {
 

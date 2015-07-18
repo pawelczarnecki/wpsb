@@ -1,7 +1,5 @@
 package tab1;
 
-import java.awt.event.MouseEvent;
-
 public class DrawBuildingListener extends AbstractMouseAndMotionListener {
     private DrawingPane drawingPane;
     private Building building;

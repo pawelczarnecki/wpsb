@@ -2,10 +2,10 @@ package tab1;
 
 
 import javax.swing.*;
-import javax.swing.event.MouseInputAdapter;
 import java.awt.*;
-import java.awt.event.*;
-import java.util.*;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.util.Vector;
 
 /* ScrollDemo2.java requires no other files. */
 public class ScrollDemo2 extends JPanel

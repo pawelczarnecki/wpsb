@@ -1,21 +1,11 @@
 package praca;
 
-import java.awt.CardLayout;
-import java.awt.Dimension;
-import java.io.File;
-import java.io.IOException;
-
-import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
-import javax.swing.JComponent;
-import javax.swing.JPanel;
-import javax.swing.JTabbedPane;
-
 import tab1.Tab2JPanel;
-import tab2.NewJPanel;
-import tab3.Zakladka3;
 import tab4.Zakladka4;
 import tab5.InfoCard;
+
+import javax.swing.*;
+import java.awt.*;
 
 public class Okno extends JPanel {
 	private static final long serialVersionUID = 4823301279983650071L;

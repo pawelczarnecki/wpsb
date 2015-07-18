@@ -1,13 +1,8 @@
 package tab5;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.List;
-
-import javax.swing.JButton;
-
-import tab1.Building;
-import tab1.OtherData;
 
 public class LoadTextButton extends JButton implements ActionListener {
 

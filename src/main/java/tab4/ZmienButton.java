@@ -1,15 +1,9 @@
 package tab4;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-
-import javax.swing.JButton;
-import javax.swing.JOptionPane;
+import java.sql.*;
 
 public class ZmienButton extends JButton implements ActionListener {
 

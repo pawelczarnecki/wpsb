@@ -1,9 +1,5 @@
 package tab1;
 
-import java.awt.*;
-import java.util.*;
-import java.util.List;
-
 public class RangeLine {
 
     private final int power;

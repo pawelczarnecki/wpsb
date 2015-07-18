@@ -1,8 +1,7 @@
 package praca;
 
+import javax.swing.*;
 import java.io.File;
-
-import javax.swing.DefaultListModel;
 
 public class FilesInLocation {
 	public DefaultListModel<String> getFilesInLocation() {

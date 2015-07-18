@@ -1,21 +1,13 @@
 package tab1;
 
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.Rectangle;
-import java.awt.RenderingHints;
-import java.awt.Shape;
-import java.awt.geom.Line2D;
+import javax.imageio.ImageIO;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
 import java.util.Vector;
-
-import javax.imageio.ImageIO;
-import javax.swing.JPanel;
 
 /** The component inside the scroll pane. */
 public class DrawingPane extends JPanel {

@@ -1,22 +1,9 @@
 package tab4;
 
-import java.awt.BorderLayout;
+import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.IOException;
-import java.util.Vector;
-
-import javax.swing.ImageIcon;
-import javax.swing.JComboBox;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JTable;
-import javax.swing.JTextField;
-import javax.swing.table.DefaultTableModel;
-
-import tab1.DrawButton;
-import tab3.AddAntenaButton;
 
 public class Zakladka4 extends JPanel implements ActionListener {
 	private static final long serialVersionUID = -1770893618931199909L;

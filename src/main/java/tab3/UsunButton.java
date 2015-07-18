@@ -1,16 +1,13 @@
 package tab3;
 
+import tab4.Edytuj;
+
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-
-import javax.swing.JButton;
-import javax.swing.JOptionPane;
-
-import tab4.Edytuj;
 
 public class UsunButton extends JButton implements ActionListener {
 	/**

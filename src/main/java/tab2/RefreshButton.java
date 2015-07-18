@@ -1,18 +1,8 @@
 package tab2;
 
-import java.awt.Component;
+import javax.swing.*;
 import java.awt.event.ActionListener;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-
-import javax.swing.DefaultListModel;
-import javax.swing.JButton;
-import javax.swing.JList;
-
-import praca.FilesInLocation;
+import java.sql.*;
 
 public class RefreshButton extends JButton implements ActionListener {
 

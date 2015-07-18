@@ -1,6 +1,6 @@
 package tab1;
 
-import java.awt.Shape;
+import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.List;

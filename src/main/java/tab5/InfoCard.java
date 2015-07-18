@@ -1,15 +1,9 @@
 package tab5;
 
-import java.io.BufferedReader;
+import javax.swing.*;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.util.Scanner;
-
-import javax.swing.JFileChooser;
-import javax.swing.JTextArea;
-
-import tab1.OtherDataButton;
 
 
 public class InfoCard  extends javax.swing.JPanel {

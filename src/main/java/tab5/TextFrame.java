@@ -1,10 +1,9 @@
 package tab5;
 
+import javax.swing.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-
-import javax.swing.JTextArea;
 
 
 public class TextFrame extends javax.swing.JFrame {

@@ -1,13 +1,6 @@
 package tab4;
 
-import javax.swing.GroupLayout;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JTable;
-import javax.swing.JTextField;
-import javax.swing.LayoutStyle;
-import javax.swing.table.DefaultTableModel;
+import javax.swing.*;
 
 public class BazaOkno extends JFrame {
 

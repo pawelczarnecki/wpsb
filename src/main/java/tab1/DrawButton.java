@@ -1,11 +1,9 @@
 package tab1;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
-
-import javax.swing.JButton;
-import javax.swing.JPanel;
 
 public class DrawButton extends JButton implements ActionListener {
 	private static final long serialVersionUID = -8082236412704993101L;
