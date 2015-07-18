@@ -8,7 +8,7 @@ import java.util.Vector;
 
 public class Tab2JPanel extends JPanel {
 	private static final long serialVersionUID = -1073342979021233050L;
-	private List<Antena> antenas = new ArrayList<>();
+	private List<Antenna> antennas = new ArrayList<>();
 	private List<Building> buildings = new ArrayList<>();
 	private String filename;
 	//CHANGE VECTOR TO LIST
@@ -19,17 +19,17 @@ public class Tab2JPanel extends JPanel {
 	public Tab2JPanel() {
 		super(new BorderLayout());
 		//drawingPane = new DrawingPane(shapes,antenas);
-		drawingPane = new DrawingPane(shapes,antenas, buildings);
+		drawingPane = new DrawingPane(shapes, antennas, buildings);
 		drawingPane.addMouseListener(new Tab2JPanelMouseListener(this,
 				buildings));
 		drawingPane.addKeyListener(new Tab2JPanelKeyListener(this,
-				shapes, antenas, buildings));
+				shapes, antennas, buildings));
 		
 		JScrollPane scroller = new JScrollPane(drawingPane);
 		OpenButton openButton = new OpenButton(drawingPane);
 		SaveButton saveButton = new SaveButton(drawingPane);
-		DrawButton drawButton = new DrawButton(this, antenas, buildings);
-		AntenaDataButton antenaDataButton = new AntenaDataButton(this,antenas);
+		DrawButton drawButton = new DrawButton(this, antennas, buildings);
+		AntenaDataButton antenaDataButton = new AntenaDataButton(this, antennas);
 		OtherDataButton otherDataButton = new OtherDataButton(this,buildings);
 		
 		extracted(scroller, openButton, saveButton, drawButton,

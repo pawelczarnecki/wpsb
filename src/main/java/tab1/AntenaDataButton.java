@@ -10,12 +10,12 @@ public class AntenaDataButton extends JButton implements ActionListener {
 	
 	private Tab2JPanel tab2JPanel;
 
-	private List<Antena> antenas;
+	private List<Antenna> antennas;
 
-	public AntenaDataButton(Tab2JPanel tab2JPanel, List<Antena> antenas) {
+	public AntenaDataButton(Tab2JPanel tab2JPanel, List<Antenna> antennas) {
 		super("Zmien dane");
 		this.tab2JPanel = tab2JPanel;
-		this.antenas = antenas;
+		this.antennas = antennas;
 		setVisible(true);
 		addActionListener(this);
 		setToolTipText("By zmieniæ dane anten");
@@ -24,7 +24,7 @@ public class AntenaDataButton extends JButton implements ActionListener {
 
 	public void actionPerformed(ActionEvent e) {
 
-		AntenaData okno = new AntenaData(tab2JPanel,antenas);
+		AntenaData okno = new AntenaData(tab2JPanel, antennas);
 		// okno.dispose();
 	}
 

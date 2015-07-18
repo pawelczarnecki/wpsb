@@ -10,14 +10,14 @@ public class Tab2JPanelKeyListener implements KeyListener {
 
 	private Vector<Shape> shapes;
 	private Tab2JPanel drawingPane;
-	private List<Antena> antenas;
+	private List<Antenna> antennas;
 	private List<Building> buildings;
 
 	public Tab2JPanelKeyListener(Tab2JPanel drawingPane, Vector<Shape> rectangles,
-			List<Antena> antenas, List<Building> buildings) {
+			List<Antenna> antennas, List<Building> buildings) {
 		this.drawingPane = drawingPane;
 		this.shapes = rectangles;
-		this.antenas = antenas;
+		this.antennas = antennas;
 		this.buildings = buildings;
 	}
 
@@ -27,11 +27,11 @@ public class Tab2JPanelKeyListener implements KeyListener {
 		if (e.getKeyCode() == KeyEvent.VK_A) {
 			int x = Math.max(0, Tab2JPanelMouseListener.mouseX);
 			int y = Math.max(0, Tab2JPanelMouseListener.mouseY);
-			antenas.add(new Antena(x, y, "dane/anteny/"+drawingPane.getCurrentFileName(),0, 10,-88,800));/*drawingPane.getCurrentAngle()*/
+			antennas.add(new Antenna(x, y, "dane/anteny/"+drawingPane.getCurrentFileName(),0, 10,-88,800));/*drawingPane.getCurrentAngle()*/
 		}
 		if (e.getKeyCode() == KeyEvent.VK_M) {
 			shapes.removeAllElements();
-			antenas.clear();
+			antennas.clear();
 		}
 		if (e.getKeyCode() == KeyEvent.VK_B) {
 			shapes.removeAllElements();
@@ -40,7 +40,7 @@ public class Tab2JPanelKeyListener implements KeyListener {
 		if (e.getKeyCode() == KeyEvent.VK_N) {
 			shapes.removeAllElements();
 			buildings.clear();
-			antenas.clear();
+			antennas.clear();
 		}
 		
 		drawingPane.revalidate();

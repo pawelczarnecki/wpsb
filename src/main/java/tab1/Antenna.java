@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Antena {
+public class Antenna {
 
 	// private static final int CHANGING_LINES_LENGHT = 2;
 	private static final BufferedImage icon = antenaIcon();
@@ -24,7 +24,7 @@ public class Antena {
 	private final List<Building> buildings = new ArrayList<Building>();
 	private String filename;
 
-	public Antena(int x, int y, String filename, double angle, int Zysk,int minZysk, int czestotliwosc) {
+	public Antenna(int x, int y, String filename, double angle, int Zysk, int minZysk, int czestotliwosc) {
 		this.filename = filename;
 		this.Zysk=Zysk;
 		this.minZysk=minZysk;

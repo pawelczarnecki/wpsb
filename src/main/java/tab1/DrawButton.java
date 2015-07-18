@@ -8,15 +8,15 @@ import java.util.List;
 public class DrawButton extends JButton implements ActionListener {
 	private static final long serialVersionUID = -8082236412704993101L;
 	
-	private List<Antena> antenas;
+	private List<Antenna> antennas;
 	private JPanel drawingPane;
 
 	private List<Building> buildings;
 
-	public DrawButton(Tab2JPanel drawingPane, List<Antena> antenas, List<Building> buildings) {
+	public DrawButton(Tab2JPanel drawingPane, List<Antenna> antennas, List<Building> buildings) {
 		super("Narysuj");
 		this.drawingPane = drawingPane;
-		this.antenas = antenas;
+		this.antennas = antennas;
 		this.buildings = buildings;
 		setVisible(true);
 		addActionListener(this);
@@ -26,9 +26,9 @@ public class DrawButton extends JButton implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
-		for (Antena antena : antenas) {
+		for (Antenna antenna : antennas) {
 			
-			antena.drawLines(buildings);
+			antenna.drawLines(buildings);
 		}
 		drawingPane.revalidate();
 		drawingPane.repaint();
