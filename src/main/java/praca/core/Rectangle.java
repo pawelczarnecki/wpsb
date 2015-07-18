@@ -1,10 +1,10 @@
 package praca.core;
 
 public class Rectangle {
-    final int x;
-    final int y;
-    final int width;
-    final int height;
+    final public int x;
+    final public int y;
+    final public int width;
+    final public int height;
 
     public Rectangle(int x, int y, int width, int height) {
         this.x = x;

@@ -4,11 +4,15 @@ public class FieldAntennaParams {
 
     final boolean canSetAntenna;
 
-    public FieldAntennaParams() {
-        canSetAntenna = false;
+    private FieldAntennaParams(boolean canSetAntenna) {
+        this.canSetAntenna = canSetAntenna;
     }
 
     public static FieldAntennaParams defaultAntennaParams() {
-        return new FieldAntennaParams();
+        return new FieldAntennaParams(false);
+    }
+
+    public static FieldAntennaParams getEnableAntennaParams() {
+        return new FieldAntennaParams(true);
     }
 }

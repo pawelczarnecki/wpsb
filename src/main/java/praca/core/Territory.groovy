@@ -1,8 +1,8 @@
-package praca.core;
+package praca.core
 
-import java.util.ArrayList;
-import java.util.List;
+import groovy.transform.CompileStatic
 
+@CompileStatic
 public class Territory {
 
     final private List<List<Field>> fields;
@@ -22,19 +22,28 @@ public class Territory {
         return fields.get(y).get(x);
     }
 
-    void setRectangleBuilding(Rectangle area, final FiledBuildingParams filedBuildingParams) {
-        iterateOverArea(area, {
-            it.filedBuildingParams = filedBuildingParams;
+    void setRectangleBuilding(Rectangle area, FiledBuildingParams filedBuildingParams) {
+        iterateOverArea(area, { Field field ->
+            field.filedBuildingParams = filedBuildingParams;
         });
     }
 
-    void setAntennaPossiblePlaces(Rectangle area, final FieldAntennaParams fieldAntennaParams) {
-        iterateOverArea(area, {
-            it.fieldAntennaParams = fieldAntennaParams;
+    void setAntennaPossiblePlaces(Rectangle area, FieldAntennaParams fieldAntennaParams) {
+        iterateOverArea(area, { Field field ->
+            field.fieldAntennaParams = fieldAntennaParams;
         });
     }
 
-    void iterateOverArea(Rectangle area, Closure task) {
+    Cover cover(List<Antenna> antennas) {
+        List<Cover> covers = antennas.collect(this.&cover)
+        return new Cover();
+    }
+
+    Cover cover(Antenna antenna) {
+        return new Cover()
+    }
+
+    private void iterateOverArea(Rectangle area, Closure task) {
         fields.subList(area.y, area.y + area.height).each { row ->
             row.subList(area.x, area.x + area.width).each { field ->
                 task.call(field);
