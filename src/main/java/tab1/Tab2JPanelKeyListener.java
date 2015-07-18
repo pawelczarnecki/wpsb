@@ -27,7 +27,7 @@ public class Tab2JPanelKeyListener implements KeyListener {
 		if (e.getKeyCode() == KeyEvent.VK_A) {
 			int x = Math.max(0, Tab2JPanelMouseListener.mouseX);
 			int y = Math.max(0, Tab2JPanelMouseListener.mouseY);
-			antennas.add(new Antenna(x, y, "dane/anteny/"+drawingPane.getCurrentFileName(),0, 10,-88,800));/*drawingPane.getCurrentAngle()*/
+			antennas.add(Antenna.newAntenna(x, y, "dane/anteny/" + drawingPane.getCurrentFileName()));/*drawingPane.getCurrentAngle()*/
 		}
 		if (e.getKeyCode() == KeyEvent.VK_M) {
 			shapes.removeAllElements();
@@ -46,7 +46,7 @@ public class Tab2JPanelKeyListener implements KeyListener {
 		drawingPane.revalidate();
 		drawingPane.repaint();
 	}
-	
+
 	@Override
 	public void keyPressed(KeyEvent e) {}
 	@Override
