@@ -1,13 +1,18 @@
 package tab1;
 
+import javafx.scene.layout.BackgroundImage;
+
 import java.awt.*;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
 import java.awt.geom.Point2D;
+import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+
+
 
 public class Linia {
 	private final Point2D punktpoczatku;
@@ -16,19 +21,23 @@ public class Linia {
 	private final double czestotliwosc;
 	private static double skala = 1;
 	private double odleglosc;
+	private BufferedImage tlo;
+	private Point2D koniec;
 
-	public Linia(Point2D p, double zysk, double kat, int czestotliwosc) {
+
+	public Linia(Point2D p, double zysk, double kat, int czestotliwosc, BufferedImage backGroundImageAntennaDrawable) {
 		this.punktpoczatku = p;
 		this.zysk = zysk;
 		this.radians = Math.toRadians(kat);
 		this.czestotliwosc = czestotliwosc;
+		this.tlo=backGroundImageAntennaDrawable;
 	}
 
 	public void drawOneLine(Graphics2D g2, List<Building> buildings) {
 		double avaiablePower = zysk;
 		Point2D poczatek = punktpoczatku;
 		double stalaBudynkow = 0;
-		double pom = 0;
+
 
 		for (Point2D point2d : getIntersectionPoints(buildings)) {
 			if (point2d != null) {
@@ -50,13 +59,25 @@ public class Linia {
 						Point2D punktK = new Point2D.Double(
 								punktpoczatku.getX() + x2, punktpoczatku.getY()
 										+ y2);
-						System.out.println("wspolrzedne konca " + punktK.getX()
-								+ punktK.getY());
+
+						if( punktK.getX() > tlo.getWidth())
+							punktK.setLocation(tlo.getWidth(),punktK.getY());
+						if (punktK.getY() > tlo.getHeight())
+							punktK.setLocation(punktK.getX(),tlo.getHeight());
+
+						if( punktK.getX() <0)
+							punktK.setLocation(0,punktK.getY());
+						if (punktK.getY() < 0)
+							punktK.setLocation(punktK.getX(),0);
+
+
 						g2.draw(new Line2D.Double(poczatek, punktK));
 						g2.setColor(Color.green);
 						g2.fill(new Ellipse2D.Double(punktK.getX() - 5, punktK
 								.getY() - 5, 10, 10));
 						avaiablePower = 0;
+						koniec = new Point2D.Double(punktK.getX(),
+								punktK.getY());
 
 					} else {// rys do budynku
 
@@ -66,13 +87,15 @@ public class Linia {
 						g2.fill(new Ellipse2D.Double(point2d.getX() - 5,
 								point2d.getY() - 5, 10, 10));
 
-						System.out.println("dostepna moc przed budynkiem  "
+						/*System.out.println("dostepna moc przed budynkiem  "
 								+ (avaiablePower - stalaBudynkow - 32.45d - 20
 										* Math.log10(czestotliwosc) - 20 * Math
 										.log10(punktpoczatku.distance(point2d)
-												/ skala)));
-
+												/ skala)));*/
+						koniec = new Point2D.Double(point2d.getX(),
+								point2d.getY());
 					}
+
 					poczatek = point2d;
 					g2.setColor(Color.blue);
 				} else { // budynki
@@ -115,13 +138,24 @@ public class Linia {
 							}
 
 						}
-						System.out.println("wspolrzedne konca " + punktK.getX()
-								+ punktK.getY());
+						if( punktK.getX() > tlo.getWidth())
+							punktK.setLocation(tlo.getWidth(),punktK.getY());
+						if (punktK.getY() > tlo.getHeight())
+							punktK.setLocation(punktK.getX(),tlo.getHeight());
+
+						if( punktK.getX() <0)
+							punktK.setLocation(0,punktK.getY());
+						if (punktK.getY() < 0)
+							punktK.setLocation(punktK.getX(),0);
+
+						//System.out.println("wspolrzedne konca (budynki) x " + punktK.getX()+" y "+ punktK.getY());
 						g2.draw(new Line2D.Double(poczatek, punktK));
 						g2.setColor(Color.green);
 						g2.fill(new Ellipse2D.Double(punktK.getX() - 5, punktK
 								.getY() - 5, 10, 10));
 						avaiablePower = 0;
+						koniec = new Point2D.Double(punktK.getX(),
+								punktK.getY());
 
 					} else {// narysuj do sciany
 
@@ -132,12 +166,15 @@ public class Linia {
 								point2d.getY() - 5, 10, 10));
 						stalaBudynkow = stalaBudynkow
 								+ getRequiredPower(poczatek, point2d, buildings);
-						System.out.println("dostepna moc na koncu budynku  "
+						/*System.out.println("dostepna moc na koncu budynku  "
 								+ (avaiablePower - stalaBudynkow - 32.45d - 20
 										* Math.log10(czestotliwosc) - 20 * Math
 										.log10(punktpoczatku.distance(point2d)
-												/ skala)));
+												/ skala)));*/
+						koniec = new Point2D.Double(point2d.getX(),
+								point2d.getY());
 					}
+
 					poczatek = point2d;
 					g2.setColor(Color.blue);
 
@@ -145,6 +182,8 @@ public class Linia {
 
 			}
 		}
+		//System.out.println("wspolrzedne konca x " + koniec.getX() +" y "+ koniec.getY());
+		setKoniec(koniec);
 	}
 
 	private List<Point2D> getIntersectionPoints(List<Building> buildings) {
@@ -196,5 +235,14 @@ public class Linia {
 		}
 		return 1;
 	}
+	public Point2D getKoniec()
+	{
+		return koniec;
+	}
+
+	private void setKoniec(Point2D koniecset) {
+		koniec=koniecset;
+	}
+
 
 }

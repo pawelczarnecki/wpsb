@@ -17,6 +17,12 @@ public class DrawingPane extends JPanel {
 	private List<AntennaDrawable> antennas;
 	private List<Building> buildings;
 
+
+
+	public double BoundaryX;
+	public double BoundaryY;
+
+
 	public DrawingPane(Vector<Shape> shapes, List<AntennaDrawable> antennas, List<Building> buildings) {
 		this.shapes = shapes;
 		this.antennas = antennas;
@@ -33,7 +39,6 @@ public class DrawingPane extends JPanel {
 		g.clearRect(0, 0, g.getClipBounds().width, g.getClipBounds().height);
 
 		g.drawImage(backGroundImage, 0, 0, null);
-
 		/*
 		for (Shape shape : shapes) {
 			if (shape instanceof Rectangle) {
@@ -48,14 +53,28 @@ public class DrawingPane extends JPanel {
 			building.draw(g2);
 		}
 		for(AntennaDrawable antenna : antennas){
-			antenna.draw(g2, buildings);
+			antenna.draw(g2, buildings,backGroundImage);
 		}
 		
 	}
 	public BufferedImage getBackGroundImage() {
 		return backGroundImage; 
 	}
-	
+
+	public void setBoundaries()
+	{
+		 BoundaryX = backGroundImage.getWidth();
+		 BoundaryY = backGroundImage.getHeight();
+	}
+
+	public double getBoundaryX()
+	{
+		return BoundaryX;
+	}
+	public double getBoundaryY()
+	{
+		return BoundaryY;
+	}
 	public void changePicture(String name) {
 		try {
 			File file = new File(name);
@@ -68,8 +87,10 @@ public class DrawingPane extends JPanel {
 					.getWidth(), backGroundImage.getHeight()));
 			repaint();
 			revalidate();
+			setBoundaries();
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
 	}
+
 }

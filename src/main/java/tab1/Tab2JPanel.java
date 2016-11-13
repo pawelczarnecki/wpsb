@@ -1,5 +1,7 @@
 package tab1;
 
+import javafx.scene.layout.BackgroundImage;
+
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
@@ -24,7 +26,8 @@ public class Tab2JPanel extends JPanel {
 				buildings));
 		drawingPane.addKeyListener(new Tab2JPanelKeyListener(this,
 				shapes, antennas, buildings));
-		
+
+
 		JScrollPane scroller = new JScrollPane(drawingPane);
 		OpenButton openButton = new OpenButton(drawingPane);
 		SaveButton saveButton = new SaveButton(drawingPane);
