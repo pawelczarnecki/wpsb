@@ -53,10 +53,6 @@ public class AntennaDrawable {
         for (AntennaCharacteristicSingleLine singleLine : antenna.characteristic.lines) {
             drawOneLine(buildings, singleLine, backGroundImageAntennaDrawable);
         }
-        for(int i=0; i<10; i++) {
-            pkt1 = lines.get(i).getKoniec();
-            System.out.println("koniec kreski  x" + pkt1.getX() + " y" + pkt1.getY());
-        }
     }
 
     @Override
@@ -72,6 +68,10 @@ public class AntennaDrawable {
 
         Linia line = new Linia(point, antenna.gain + procentZysk - antenna.minGain, kat, antenna.frequency, backGroundImageAntennaDrawable);
         lines.add(line);
+        /*for(int i=0; i<10; i++) {
+            pkt1 = line.getKoniec();
+            System.out.println("koniec kreski  x" + pkt1.getX() + " y" + pkt1.getY());
+        }*/
     }
 
     private void count()

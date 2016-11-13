@@ -22,7 +22,7 @@ public class Linia {
 	private static double skala = 1;
 	private double odleglosc;
 	private BufferedImage tlo;
-	private Point2D koniec;
+	public Point2D koniec= new Point2D.Double(100,100);
 
 
 	public Linia(Point2D p, double zysk, double kat, int czestotliwosc, BufferedImage backGroundImageAntennaDrawable) {
@@ -240,7 +240,7 @@ public class Linia {
 		return koniec;
 	}
 
-	private void setKoniec(Point2D koniecset) {
+	public void setKoniec(Point2D koniecset) {
 		koniec=koniecset;
 	}
 
